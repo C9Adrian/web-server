@@ -10,6 +10,7 @@ const viewPaths = path.join(__dirname, '../templates/views')
 const paritalPath = path.join(__dirname, '../templates/paritals')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 //setup handlerbars engine
 app.set('view engine', 'hbs')
@@ -88,6 +89,6 @@ app.get('*' , (req, res) =>
     res.send('404 page')
 })
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000')
+app.listen(port, () => {
+    console.log('Server is up on port ' + port)
 })
