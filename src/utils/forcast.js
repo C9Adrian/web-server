@@ -15,8 +15,8 @@ const forcast = (lat,longitiude, callback) => {
         }
         else
         {
-            callback(undefined,'It is ' +response.body.current.weather_descriptions[0] + '\n'  +
-            response.body.current.temperature + 'F with a ' + response.body.current.humidity + ' humditiy rating')
+            callback(undefined,'It is ' +response.body.current.weather_descriptions[0] + '. It is currently '  +
+            response.body.current.temperature + 'F with a wind speed of  ' + response.body.current.wind_speed + '. ' + response.body.current.humidity + ' humditiy rating')
         }
     })
 }
